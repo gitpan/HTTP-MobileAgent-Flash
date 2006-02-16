@@ -1,4 +1,8 @@
 Revision history for Perl extension HTTP::MobileAgent::FlashLite
 
+0.02  Thu Feb 16 16:51:34 2006
+        - Change in method name. is_support() are now is_supported().
+        (Thanks to #catalyst-ja)
+
 0.01  Thu Feb 16 11:49:27 2006
         - original version

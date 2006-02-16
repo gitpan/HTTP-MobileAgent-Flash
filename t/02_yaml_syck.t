@@ -36,10 +36,10 @@ for (@TESTS) {
 		}
 		my $version = $check->{version};
 
-		ok $agent->flash->is_support($version), sprintf("%s : is_support = %s", $agent->model, $version);
+		ok $agent->flash->is_supported($version), sprintf("%s : is_supported = %s", $agent->model, $version);
 	}
 	else {
 		is scalar keys %$check, 0, sprintf("%s : none flash", $agent->model);
-		ok !$agent->flash->is_support('0.0'), sprintf("%s : is_support 0.0", $agent->model);
+		ok !$agent->flash->is_supported('0.0'), sprintf("%s : is_supported 0.0", $agent->model);
 	}
 }

@@ -2,7 +2,7 @@ package HTTP::MobileAgent::Flash;
 use strict;
 use warnings;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use Carp;
 
@@ -21,11 +21,11 @@ sub new {
 	}, $class;
 }
 
-sub is_support {
+sub is_supported {
 	my $self = shift;
 	my $version = shift || "";
 
-	croak "You must set version before call is_support()" if ($version eq "");
+	croak "You must set version before call is_supported()" if ($version eq "");
 
 	$version =~ s/Lite//ig;
 	return ($version <= $self->version)? 1 : 0;
@@ -110,10 +110,10 @@ HTTP::MobileAgent::Flash - Flash information for HTTP::MobileAgent
 
   if ($agent->is_flash )   { ...... }
   
-  if ($agent->flash->is_support('lite1.1') and $agent->flash->width <= 230) {
+  if ($agent->flash->is_supported('lite1.1') and $agent->flash->width <= 230) {
     :
   }
-  if ($agent->flash->is_support('lite1.0') and $agent->flash->max_file_size <= 48) {
+  if ($agent->flash->is_supported('lite1.0') and $agent->flash->max_file_size <= 48) {
     :
   }
 
@@ -131,10 +131,10 @@ This module adds C<flash>, C<is_flash> method to HTTP::MobileAgent
 
 =item max_file_size
 
-=item is_support
+=item is_supported
 
-  $agent->flash->is_support('Lite1.1')
-  $agent->flash->is_support('Lite1.0')
+  $agent->flash->is_supported('Lite1.1')
+  $agent->flash->is_supported('Lite1.0')
 
 =head1 AUTHOR
 
