@@ -1,12 +1,13 @@
 --- #YAML:1.0
 name:                HTTP-MobileAgent-Flash
-version:             0.05
+version:             0.06
 abstract:            ~
 license:             ~
 author:              ~
 generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
+    Class::Accessor:               0
     HTTP::MobileAgent:             0
     Test::More:                    0.32
 meta-spec:

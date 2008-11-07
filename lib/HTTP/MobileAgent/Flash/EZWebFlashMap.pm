@@ -97,6 +97,24 @@ $FLASH_MAP ||= {
         height         => '800',
         max_file_size  => '100',
     },
+    'CA3A' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'CA3B' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'CA3C' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
     'HI33' => {
         version        => '1.1',
         width          => '240',
@@ -149,6 +167,24 @@ $FLASH_MAP ||= {
         version        => '2.0',
         width          => '240',
         height         => '400',
+        max_file_size  => '100',
+    },
+    'HI3C' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'HI3D' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'HI3E' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
         max_file_size  => '100',
     },
     'KC27' => {
@@ -235,10 +271,40 @@ $FLASH_MAP ||= {
         height         => '400',
         max_file_size  => '100',
     },
+    'KC3D' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
     'KC3E' => {
         version        => '2.0',
         width          => '240',
         height         => '320',
+        max_file_size  => '100',
+    },
+    'KC3G' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '320',
+        max_file_size  => '100',
+    },
+    'KC3H' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'KC3I' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'KC3K' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
         max_file_size  => '100',
     },
     'MA31' => {
@@ -251,6 +317,30 @@ $FLASH_MAP ||= {
         version        => '2.0',
         width          => '240',
         height         => '400',
+        max_file_size  => '100',
+    },
+    'MA33' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'MA34' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'PT33' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '320',
+        max_file_size  => '100',
+    },
+    'PT34' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '320',
         max_file_size  => '100',
     },
     'SA29' => {
@@ -325,6 +415,30 @@ $FLASH_MAP ||= {
         height         => '400',
         max_file_size  => '100',
     },
+    'SA3B' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
+    'SA3C' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '432',
+        max_file_size  => '100',
+    },
+    'SA3D' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
+    'SA3E' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
     'SH31' => {
         version        => '1.1',
         width          => '240',
@@ -347,6 +461,24 @@ $FLASH_MAP ||= {
         version        => '2.0',
         width          => '240',
         height         => '400',
+        max_file_size  => '100',
+    },
+    'SH35' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
+    'SH36' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'SH37' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
         max_file_size  => '100',
     },
     'SN31' => {
@@ -421,6 +553,30 @@ $FLASH_MAP ||= {
         height         => '400',
         max_file_size  => '100',
     },
+    'SN3D' => {
+        version        => '2.0',
+        width          => '480',
+        height         => '800',
+        max_file_size  => '100',
+    },
+    'SN3E' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '432',
+        max_file_size  => '100',
+    },
+    'SN3F' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'SN3G' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '432',
+        max_file_size  => '100',
+    },
     'ST24' => {
         version        => '1.1',
         width          => '240',
@@ -488,6 +644,12 @@ $FLASH_MAP ||= {
         max_file_size  => '100',
     },
     'ST33' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'ST34' => {
         version        => '2.0',
         width          => '240',
         height         => '400',
@@ -614,6 +776,36 @@ $FLASH_MAP ||= {
         max_file_size  => '100',
     },
     'TS3H' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'TS3I' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'TS3J' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'TS3K' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '320',
+        max_file_size  => '100',
+    },
+    'TS3L' => {
+        version        => '2.0',
+        width          => '240',
+        height         => '400',
+        max_file_size  => '100',
+    },
+    'TS3M' => {
         version        => '2.0',
         width          => '240',
         height         => '400',

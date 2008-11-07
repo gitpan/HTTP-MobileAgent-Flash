@@ -3,6 +3,7 @@ Changes
 lib/HTTP/MobileAgent/Flash.pm
 lib/HTTP/MobileAgent/Flash/DoCoMoFlashMap.pm
 lib/HTTP/MobileAgent/Flash/EZWebFlashMap.pm
+lib/HTTP/MobileAgent/Flash/SoftBankFlashMap.pm
 Makefile.PL
 MANIFEST
 META.yml			Module meta-data (added by MakeMaker)

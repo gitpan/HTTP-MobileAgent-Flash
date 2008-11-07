@@ -2,11 +2,12 @@ package HTTP::MobileAgent::Flash;
 use strict;
 use warnings;
 use vars qw($VERSION);
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 use HTTP::MobileAgent;
 use HTTP::MobileAgent::Flash::DoCoMoFlashMap;
 use HTTP::MobileAgent::Flash::EZWebFlashMap;
+use HTTP::MobileAgent::Flash::SoftBankFlashMap;
 
 use Carp;
 
@@ -42,6 +43,9 @@ sub new {
     }
     elsif ($agent->is_ezweb) {
         $map = $HTTP::MobileAgent::Flash::EZWebFlashMap::FLASH_MAP->{uc($agent->model)};
+    }
+    elsif ($agent->is_softbank) {
+        $map = $HTTP::MobileAgent::Flash::SoftBankFlashMap::FLASH_MAP->{uc($agent->model)};
     }
 
     if ($map) {
@@ -125,8 +129,8 @@ This module does not support the Vodafone, yet.
 =head1 SEE ALSO
 
 L<HTTP::MobileAgent>,
-L<http://www.nttdocomo.co.jp/p_s/imode/spec/flash.html>,
+L<http://www.nttdocomo.co.jp/service/imode/make/content/spec/flash/index.html>,
 L<http://www.au.kddi.com/ezfactory/mm/flash01.html>,
-L<http://developers.vodafone.jp/>
+L<http://creation.mb.softbank.jp/>
 
 =cut
