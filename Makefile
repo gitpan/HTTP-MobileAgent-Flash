@@ -1,33 +1,37 @@
 # This Makefile is for the HTTP::MobileAgent::Flash extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 6.42 (Revision: 41145) from the contents of
+# 6.56 (Revision: 65600) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
 #
 #   MakeMaker ARGV: ()
 #
+
 #   MakeMaker Parameters:
 
+#     ABSTRACT => q[Flash information for HTTP::MobileAgent]
 #     AUTHOR => q[KIMURA, takefumi <takefumi@mobilefactory.jp>]
-#     DIR => []
+#     BUILD_REQUIRES => { ExtUtils::MakeMaker=>q[6.42] }
+#     DISTNAME => q[HTTP-MobileAgent-Flash]
 #     EXE_FILES => [q[bin/make_map_flash_lite.pl]]
+#     MIN_PERL_VERSION => q[5.008001]
 #     NAME => q[HTTP::MobileAgent::Flash]
 #     NO_META => q[1]
-#     PL_FILES => {  }
-#     PREREQ_PM => { Test::More=>q[0.32], HTTP::MobileAgent=>q[0], Class::Accessor=>q[0] }
-#     VERSION => q[0.08]
+#     PREREQ_PM => { HTTP::MobileAgent=>q[0], Filter::Util::Call=>q[0], ExtUtils::MakeMaker=>q[6.42], Class::Accessor=>q[0] }
+#     VERSION => q[0.09]
+#     VERSION_FROM => q[lib/HTTP/MobileAgent/Flash.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
+#     realclean => { FILES=>q[MYMETA.yml] }
 
 # --- MakeMaker post_initialize section:
 
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /usr/lib/perl/5.8/Config.pm)
-
-# They may have been overridden via Makefile.PL or on the command line
+# These definitions are from config.sh (via /usr/lib/perl/5.10/Config.pm).
+# They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
 CCCDLFLAGS = -fPIC
@@ -37,16 +41,16 @@ DLSRC = dl_dlopen.xs
 EXE_EXT = 
 FULL_AR = /usr/bin/ar
 LD = cc
-LDDLFLAGS = -shared -L/usr/local/lib
-LDFLAGS =  -L/usr/local/lib
-LIBC = /lib/libc-2.3.6.so
+LDDLFLAGS = -shared -O2 -g -L/usr/local/lib -fstack-protector
+LDFLAGS =  -fstack-protector -L/usr/local/lib
+LIBC = /lib/libc-2.10.2.so
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
-OSVERS = 2.6.18-6-686
+OSVERS = 2.6.32-3-amd64
 RANLIB = :
-SITELIBEXP = /usr/local/share/perl/5.8.8
-SITEARCHEXP = /usr/local/lib/perl/5.8.8
+SITELIBEXP = /usr/local/share/perl/5.10.1
+SITEARCHEXP = /usr/local/lib/perl/5.10.1
 SO = so
 VENDORARCHEXP = /usr/lib/perl5
 VENDORLIBEXP = /usr/share/perl5
@@ -58,11 +62,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = HTTP::MobileAgent::Flash
 NAME_SYM = HTTP_MobileAgent_Flash
-VERSION = 0.08
+VERSION = 0.09
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_08
+VERSION_SYM = 0_09
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.08
+XS_VERSION = 0.09
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -74,55 +78,53 @@ INST_MAN3DIR = blib/man3
 MAN1EXT = 1p
 MAN3EXT = 3pm
 INSTALLDIRS = site
+INSTALL_BASE = /home/walf443/local
 DESTDIR = 
-PREFIX = $(SITEPREFIX)
-PERLPREFIX = /usr
-SITEPREFIX = /usr/local
-VENDORPREFIX = /usr
-INSTALLPRIVLIB = /usr/share/perl/5.8
+PREFIX = $(INSTALL_BASE)
+INSTALLPRIVLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /usr/local/share/perl/5.8.8
+INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = /usr/share/perl5
+INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /usr/lib/perl/5.8
+INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /usr/local/lib/perl/5.8.8
+INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = /usr/lib/perl5
+INSTALLVENDORARCH = $(INSTALL_BASE)/lib/perl5/x86_64-linux-gnu-thread-multi
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /usr/bin
+INSTALLBIN = $(INSTALL_BASE)/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /usr/local/bin
+INSTALLSITEBIN = $(INSTALL_BASE)/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = /usr/bin
+INSTALLVENDORBIN = $(INSTALL_BASE)/bin
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /usr/bin
+INSTALLSCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /usr/local/bin
+INSTALLSITESCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = /usr/bin
+INSTALLVENDORSCRIPT = $(INSTALL_BASE)/bin
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /usr/share/man/man1
+INSTALLMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /usr/local/man/man1
+INSTALLSITEMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = /usr/share/man/man1
+INSTALLVENDORMAN1DIR = $(INSTALL_BASE)/man/man1
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /usr/share/man/man3
+INSTALLMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /usr/local/man/man3
+INSTALLSITEMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = /usr/share/man/man3
+INSTALLVENDORMAN3DIR = $(INSTALL_BASE)/man/man3
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /usr/lib/perl/5.8
+PERL_ARCHLIB = /usr/lib/perl/5.10
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /usr/lib/perl/5.8/CORE
+PERL_INC = /usr/lib/perl/5.10/CORE
 PERL = /usr/bin/perl "-Iinc"
 FULLPERL = /usr/bin/perl "-Iinc"
 ABSPERL = $(PERL)
@@ -133,12 +135,13 @@ PERLRUNINST = $(PERLRUN) "-I$(INST_ARCHLIB)" "-Iinc" "-I$(INST_LIB)"
 FULLPERLRUNINST = $(FULLPERLRUN) "-I$(INST_ARCHLIB)" "-Iinc" "-I$(INST_LIB)"
 ABSPERLRUNINST = $(ABSPERLRUN) "-I$(INST_ARCHLIB)" "-Iinc" "-I$(INST_LIB)"
 PERL_CORE = 0
+PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /usr/local/lib/perl/5.8.8/ExtUtils/MakeMaker.pm
-MM_VERSION  = 6.42
-MM_REVISION = 41145
+MAKEMAKER   = /home/walf443/local/lib/perl5/ExtUtils/MakeMaker.pm
+MM_VERSION  = 6.56
+MM_REVISION = 65600
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -149,7 +152,7 @@ FULLEXT = HTTP/MobileAgent/Flash
 BASEEXT = Flash
 PARENT_NAME = HTTP::MobileAgent
 DLBASE = $(BASEEXT)
-VERSION_FROM = 
+VERSION_FROM = lib/HTTP/MobileAgent/Flash.pm
 OBJECT = 
 LDFROM = $(OBJECT)
 LINKTYPE = dynamic
@@ -199,7 +202,7 @@ PM_TO_BLIB = lib/HTTP/MobileAgent/Flash/SoftBankFlashMap.pm \
 
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 6.42
+MM_Unix_VERSION = 6.56
 PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
 
 
@@ -217,7 +220,7 @@ SHELL = /bin/sh
 CHMOD = chmod
 CP = cp
 MV = mv
-NOOP = $(SHELL) -c true
+NOOP = $(TRUE)
 NOECHO = @
 RM_F = rm -f
 RM_RF = rm -rf
@@ -225,20 +228,22 @@ TEST_F = test -f
 TOUCH = touch
 UMASK_NULL = umask 0
 DEV_NULL = > /dev/null 2>&1
-MKPATH = $(ABSPERLRUN) "-MExtUtils::Command" -e mkpath
-EQUALIZE_TIMESTAMP = $(ABSPERLRUN) "-MExtUtils::Command" -e eqtime
+MKPATH = $(ABSPERLRUN) -MExtUtils::Command -e 'mkpath' --
+EQUALIZE_TIMESTAMP = $(ABSPERLRUN) -MExtUtils::Command -e 'eqtime' --
+FALSE = false
+TRUE = true
 ECHO = echo
 ECHO_N = echo -n
 UNINST = 0
 VERBINST = 0
-MOD_INSTALL = $(ABSPERLRUN) -MExtUtils::Install -e 'install({@ARGV}, '\''$(VERBINST)'\'', 0, '\''$(UNINST)'\'');' --
-DOC_INSTALL = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e perllocal_install
-UNINSTALL = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e uninstall
-WARN_IF_OLD_PACKLIST = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e warn_if_old_packlist
+MOD_INSTALL = $(ABSPERLRUN) -MExtUtils::Install -e 'install([ from_to => {@ARGV}, verbose => '\''$(VERBINST)'\'', uninstall_shadows => '\''$(UNINST)'\'', dir_mode => '\''$(PERM_DIR)'\'' ]);' --
+DOC_INSTALL = $(ABSPERLRUN) -MExtUtils::Command::MM -e 'perllocal_install' --
+UNINSTALL = $(ABSPERLRUN) -MExtUtils::Command::MM -e 'uninstall' --
+WARN_IF_OLD_PACKLIST = $(ABSPERLRUN) -MExtUtils::Command::MM -e 'warn_if_old_packlist' --
 MACROSTART = 
 MACROEND = 
 USEMAKEFILE = -f
-FIXIN = $(PERLRUN) "-MExtUtils::MY" -e "MY->fixin(shift)"
+FIXIN = $(ABSPERLRUN) -MExtUtils::MY -e 'MY->fixin(shift)' --
 
 
 # --- MakeMaker makemakerdflt section:
@@ -262,7 +267,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = HTTP-MobileAgent-Flash
-DISTVNAME = HTTP-MobileAgent-Flash-0.08
+DISTVNAME = HTTP-MobileAgent-Flash-0.09
 
 
 # --- MakeMaker macro section:
@@ -287,7 +292,8 @@ DISTVNAME = HTTP-MobileAgent-Flash-0.08
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"
+	PREFIX="$(PREFIX)"\
+	INSTALL_BASE="$(INSTALL_BASE)"
 
 
 # --- MakeMaker special_targets section:
@@ -334,42 +340,42 @@ blibdirs.ts : blibdirs
 
 $(INST_LIBDIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_LIBDIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_LIBDIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_LIBDIR)
 	$(NOECHO) $(TOUCH) $(INST_LIBDIR)$(DFSEP).exists
 
 $(INST_ARCHLIB)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_ARCHLIB)
-	$(NOECHO) $(CHMOD) 755 $(INST_ARCHLIB)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_ARCHLIB)
 	$(NOECHO) $(TOUCH) $(INST_ARCHLIB)$(DFSEP).exists
 
 $(INST_AUTODIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_AUTODIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_AUTODIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_AUTODIR)
 	$(NOECHO) $(TOUCH) $(INST_AUTODIR)$(DFSEP).exists
 
 $(INST_ARCHAUTODIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_ARCHAUTODIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_ARCHAUTODIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_ARCHAUTODIR)
 	$(NOECHO) $(TOUCH) $(INST_ARCHAUTODIR)$(DFSEP).exists
 
 $(INST_BIN)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_BIN)
-	$(NOECHO) $(CHMOD) 755 $(INST_BIN)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_BIN)
 	$(NOECHO) $(TOUCH) $(INST_BIN)$(DFSEP).exists
 
 $(INST_SCRIPT)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_SCRIPT)
-	$(NOECHO) $(CHMOD) 755 $(INST_SCRIPT)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_SCRIPT)
 	$(NOECHO) $(TOUCH) $(INST_SCRIPT)$(DFSEP).exists
 
 $(INST_MAN1DIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_MAN1DIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_MAN1DIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_MAN1DIR)
 	$(NOECHO) $(TOUCH) $(INST_MAN1DIR)$(DFSEP).exists
 
 $(INST_MAN3DIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_MAN3DIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_MAN3DIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_MAN3DIR)
 	$(NOECHO) $(TOUCH) $(INST_MAN3DIR)$(DFSEP).exists
 
 
@@ -494,7 +500,7 @@ realclean purge ::  clean realclean_subdirs
 	- $(RM_F) \
 	  $(MAKEFILE_OLD) $(FIRST_MAKEFILE) 
 	- $(RM_RF) \
-	  $(DISTVNAME) 
+	  MYMETA.yml $(DISTVNAME) 
 
 
 # --- MakeMaker metafile section:
@@ -607,16 +613,16 @@ distsignature : create_distdir
 
 # --- MakeMaker install section:
 
-install :: all pure_install doc_install
+install :: pure_install doc_install
 	$(NOECHO) $(NOOP)
 
-install_perl :: all pure_perl_install doc_perl_install
+install_perl :: pure_perl_install doc_perl_install
 	$(NOECHO) $(NOOP)
 
-install_site :: all pure_site_install doc_site_install
+install_site :: pure_site_install doc_site_install
 	$(NOECHO) $(NOOP)
 
-install_vendor :: all pure_vendor_install doc_vendor_install
+install_vendor :: pure_vendor_install doc_vendor_install
 	$(NOECHO) $(NOOP)
 
 pure_install :: pure_$(INSTALLDIRS)_install
@@ -631,7 +637,7 @@ pure__install : pure_site_install
 doc__install : doc_site_install
 	$(NOECHO) $(ECHO) INSTALLDIRS not defined, defaulting to INSTALLDIRS=site
 
-pure_perl_install ::
+pure_perl_install :: all
 	$(NOECHO) $(MOD_INSTALL) \
 		read $(PERL_ARCHLIB)/auto/$(FULLEXT)/.packlist \
 		write $(DESTINSTALLARCHLIB)/auto/$(FULLEXT)/.packlist \
@@ -645,7 +651,7 @@ pure_perl_install ::
 		$(SITEARCHEXP)/auto/$(FULLEXT)
 
 
-pure_site_install ::
+pure_site_install :: all
 	$(NOECHO) $(MOD_INSTALL) \
 		read $(SITEARCHEXP)/auto/$(FULLEXT)/.packlist \
 		write $(DESTINSTALLSITEARCH)/auto/$(FULLEXT)/.packlist \
@@ -658,7 +664,7 @@ pure_site_install ::
 	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
 		$(PERL_ARCHLIB)/auto/$(FULLEXT)
 
-pure_vendor_install ::
+pure_vendor_install :: all
 	$(NOECHO) $(MOD_INSTALL) \
 		read $(VENDORARCHEXP)/auto/$(FULLEXT)/.packlist \
 		write $(DESTINSTALLVENDORARCH)/auto/$(FULLEXT)/.packlist \
@@ -669,7 +675,7 @@ pure_vendor_install ::
 		$(INST_MAN1DIR) $(DESTINSTALLVENDORMAN1DIR) \
 		$(INST_MAN3DIR) $(DESTINSTALLVENDORMAN3DIR)
 
-doc_perl_install ::
+doc_perl_install :: all
 	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
 	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
 	-$(NOECHO) $(DOC_INSTALL) \
@@ -680,7 +686,7 @@ doc_perl_install ::
 		EXE_FILES "$(EXE_FILES)" \
 		>> $(DESTINSTALLARCHLIB)/perllocal.pod
 
-doc_site_install ::
+doc_site_install :: all
 	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
 	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
 	-$(NOECHO) $(DOC_INSTALL) \
@@ -691,7 +697,7 @@ doc_site_install ::
 		EXE_FILES "$(EXE_FILES)" \
 		>> $(DESTINSTALLARCHLIB)/perllocal.pod
 
-doc_vendor_install ::
+doc_vendor_install :: all
 	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLARCHLIB)/perllocal.pod
 	-$(NOECHO) $(MKPATH) $(DESTINSTALLARCHLIB)
 	-$(NOECHO) $(DOC_INSTALL) \
@@ -737,7 +743,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 	$(PERLRUN) Makefile.PL 
 	$(NOECHO) $(ECHO) "==> Your Makefile has been rebuilt. <=="
 	$(NOECHO) $(ECHO) "==> Please rerun the $(MAKE) command.  <=="
-	false
+	$(FALSE)
 
 
 
@@ -789,16 +795,15 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,08,0,0">' > $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <TITLE>$(DISTNAME)</TITLE>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <ABSTRACT></ABSTRACT>' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.09">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '    <ABSTRACT>Flash information for HTTP::MobileAgent</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>KIMURA, takefumi &lt;takefumi@mobilefactory.jp&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="Class-Accessor" VERSION="0,0,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="HTTP-MobileAgent" VERSION="0,0,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="Test-More" VERSION="0,32,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <OS NAME="$(OSNAME)" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i486-linux-gnu-thread-multi-5.8" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <PERLCORE VERSION="5,008001,0,0" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Class::Accessor" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Filter::Util::Call" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="HTTP::MobileAgent" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-gnu-thread-multi-5.10" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
@@ -806,8 +811,8 @@ ppd :
 
 # --- MakeMaker pm_to_blib section:
 
-pm_to_blib : $(TO_INST_PM)
-	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', '\''$(PM_FILTER)'\'')' -- \
+pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
+	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
 	  lib/HTTP/MobileAgent/Flash/SoftBankFlashMap.pm blib/lib/HTTP/MobileAgent/Flash/SoftBankFlashMap.pm \
 	  lib/HTTP/MobileAgent/Flash.pm blib/lib/HTTP/MobileAgent/Flash.pm \
 	  lib/HTTP/MobileAgent/Flash/DoCoMoFlashMap.pm blib/lib/HTTP/MobileAgent/Flash/DoCoMoFlashMap.pm \
@@ -822,13 +827,14 @@ pm_to_blib : $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 0.68
+# Postamble by Module::Install 0.97
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
 	$(RM_F) $(DISTVNAME).tar$(SUFFIX)
-	$(RM_RF) inc MANIFEST.bak _build
-	$(PERL) -I. "-MModule::Install::Admin" -e "remove_meta()"
+	$(RM_F) MANIFEST.bak _build
+	$(PERL) "-Ilib" "-MModule::Install::Admin" -e "remove_meta()"
+	$(RM_RF) inc
 
 reset :: purge
 
