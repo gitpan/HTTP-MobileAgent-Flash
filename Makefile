@@ -20,7 +20,7 @@
 #     NAME => q[HTTP::MobileAgent::Flash]
 #     NO_META => q[1]
 #     PREREQ_PM => { HTTP::MobileAgent=>q[0], Filter::Util::Call=>q[0], ExtUtils::MakeMaker=>q[6.42], Class::Accessor=>q[0] }
-#     VERSION => q[0.15]
+#     VERSION => q[0.16]
 #     VERSION_FROM => q[lib/HTTP/MobileAgent/Flash.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
@@ -30,7 +30,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1/darwin-2level/Config.pm).
+# These definitions are from config.sh (via /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -41,16 +41,16 @@ DLSRC = dl_dlopen.xs
 EXE_EXT = 
 FULL_AR = /usr/bin/ar
 LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc
-LDDLFLAGS =  -bundle -undefined dynamic_lookup -L/usr/local/lib -L/opt/local/lib -fstack-protector
-LDFLAGS =  -fstack-protector -L/usr/local/lib -L/opt/local/lib
+LDDLFLAGS =  -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector
+LDFLAGS =  -fstack-protector -L/usr/local/lib
 LIBC = /usr/lib/libc.dylib
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = darwin
-OSVERS = 9.8.0
+OSVERS = 10.7.0
 RANLIB = ranlib
-SITELIBEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/site_perl/5.12.1
-SITEARCHEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/site_perl/5.12.1/darwin-2level
+SITELIBEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3
+SITEARCHEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level
 SO = dylib
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -62,11 +62,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = HTTP::MobileAgent::Flash
 NAME_SYM = HTTP_MobileAgent_Flash
-VERSION = 0.15
+VERSION = 0.16
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_15
+VERSION_SYM = 0_16
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.15
+XS_VERSION = 0.16
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -80,55 +80,55 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1
-SITEPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1
+PERLPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3
+SITEPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3
 VENDORPREFIX = 
-INSTALLPRIVLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1
+INSTALLPRIVLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/site_perl/5.12.1
+INSTALLSITELIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1/darwin-2level
+INSTALLARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/site_perl/5.12.1/darwin-2level
+INSTALLSITEARCH = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/bin
+INSTALLBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/bin
+INSTALLSITEBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/bin
+INSTALLSCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/bin
+INSTALLSITESCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/man/man1
+INSTALLMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/man/man1
+INSTALLSITEMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/man/man3
+INSTALLMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/man/man3
+INSTALLSITEMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1/darwin-2level
+PERL_ARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1/darwin-2level/CORE
-PERL = /Users/yoshimi/perl5/perlbrew/bin/perl "-Iinc"
-FULLPERL = /Users/yoshimi/perl5/perlbrew/bin/perl "-Iinc"
+PERL_INC = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level/CORE
+PERL = /Users/yoshimi/perl5/perlbrew/perls/current/bin/perl "-Iinc"
+FULLPERL = /Users/yoshimi/perl5/perlbrew/perls/current/bin/perl "-Iinc"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -141,7 +141,7 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.1/lib/5.12.1/ExtUtils/MakeMaker.pm
+MAKEMAKER   = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/ExtUtils/MakeMaker.pm
 MM_VERSION  = 6.56
 MM_REVISION = 65600
 
@@ -269,7 +269,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = HTTP-MobileAgent-Flash
-DISTVNAME = HTTP-MobileAgent-Flash-0.15
+DISTVNAME = HTTP-MobileAgent-Flash-0.16
 
 
 # --- MakeMaker macro section:
@@ -752,7 +752,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /Users/yoshimi/perl5/perlbrew/bin/perl
+FULLPERL      = /Users/yoshimi/perl5/perlbrew/perls/current/bin/perl
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -796,7 +796,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.15">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.16">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Flash information for HTTP::MobileAgent</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>KIMURA, takefumi &lt;takefumi@mobilefactory.jp&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
@@ -828,7 +828,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 1.00
+# Postamble by Module::Install 1.01
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
