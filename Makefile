@@ -1,7 +1,7 @@
 # This Makefile is for the HTTP::MobileAgent::Flash extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 6.56 (Revision: 65600) from the contents of
+# 6.62 (Revision: 66200) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
@@ -12,15 +12,16 @@
 #   MakeMaker Parameters:
 
 #     ABSTRACT => q[Flash information for HTTP::MobileAgent]
-#     AUTHOR => q[KIMURA, takefumi <takefumi@mobilefactory.jp>]
-#     BUILD_REQUIRES => { ExtUtils::MakeMaker=>q[6.42] }
+#     AUTHOR => [q[KIMURA, takefumi <takefumi@mobilefactory.jp>]]
+#     BUILD_REQUIRES => { Test::Base=>q[0], Test::More=>q[0.32], ExtUtils::MakeMaker=>q[6.62] }
+#     CONFIGURE_REQUIRES => {  }
 #     DISTNAME => q[HTTP-MobileAgent-Flash]
 #     EXE_FILES => [q[bin/make_map_flash_lite.pl]]
 #     MIN_PERL_VERSION => q[5.008001]
 #     NAME => q[HTTP::MobileAgent::Flash]
 #     NO_META => q[1]
-#     PREREQ_PM => { HTTP::MobileAgent=>q[0], Filter::Util::Call=>q[0], ExtUtils::MakeMaker=>q[6.42], Class::Accessor=>q[0] }
-#     VERSION => q[0.18]
+#     PREREQ_PM => { Test::More=>q[0.32], Test::Base=>q[0], HTTP::MobileAgent=>q[0], ExtUtils::MakeMaker=>q[6.62], Class::Accessor=>q[0] }
+#     VERSION => q[0.19]
 #     VERSION_FROM => q[lib/HTTP/MobileAgent/Flash.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
@@ -30,7 +31,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level/Config.pm).
+# These definitions are from config.sh (via /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -43,14 +44,14 @@ FULL_AR = /usr/bin/ar
 LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc
 LDDLFLAGS =  -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /usr/lib/libc.dylib
+LIBC = 
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = darwin
-OSVERS = 10.7.0
+OSVERS = 10.8.0
 RANLIB = ranlib
-SITELIBEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3
-SITEARCHEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level
+SITELIBEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
+SITEARCHEXP = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/darwin-2level
 SO = dylib
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -62,11 +63,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = HTTP::MobileAgent::Flash
 NAME_SYM = HTTP_MobileAgent_Flash
-VERSION = 0.18
+VERSION = 0.19
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_18
+VERSION_SYM = 0_19
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.18
+XS_VERSION = 0.19
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -80,53 +81,53 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3
-SITEPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3
+PERLPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2
+SITEPREFIX = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2
 VENDORPREFIX = 
-INSTALLPRIVLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3
+INSTALLPRIVLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3
+INSTALLSITELIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level
+INSTALLARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/site_perl/5.12.3/darwin-2level
+INSTALLSITEARCH = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/site_perl/5.14.2/darwin-2level
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
+INSTALLBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
+INSTALLSITEBIN = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
+INSTALLSCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/bin
+INSTALLSITESCRIPT = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man1
+INSTALLMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man1
+INSTALLSITEMAN1DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man3
+INSTALLMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/man/man3
+INSTALLSITEMAN3DIR = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level
+PERL_ARCHLIB = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/darwin-2level/CORE
+PERL_INC = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/darwin-2level/CORE
 PERL = /Users/yoshimi/perl5/perlbrew/perls/current/bin/perl "-Iinc"
 FULLPERL = /Users/yoshimi/perl5/perlbrew/perls/current/bin/perl "-Iinc"
 ABSPERL = $(PERL)
@@ -141,9 +142,9 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /Users/yoshimi/perl5/perlbrew/perls/perl-5.12.3/lib/5.12.3/ExtUtils/MakeMaker.pm
-MM_VERSION  = 6.56
-MM_REVISION = 65600
+MAKEMAKER   = /Users/yoshimi/perl5/perlbrew/perls/perl-5.14.2/lib/5.14.2/ExtUtils/MakeMaker.pm
+MM_VERSION  = 6.62
+MM_REVISION = 66200
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -204,7 +205,7 @@ PM_TO_BLIB = lib/HTTP/MobileAgent/Flash/SoftBankFlashMap.pm \
 
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 6.56
+MM_Unix_VERSION = 6.62
 PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
 
 
@@ -269,7 +270,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = HTTP-MobileAgent-Flash
-DISTVNAME = HTTP-MobileAgent-Flash-0.18
+DISTVNAME = HTTP-MobileAgent-Flash-0.19
 
 
 # --- MakeMaker macro section:
@@ -473,14 +474,15 @@ clean :: clean_subdirs
 	  *$(LIB_EXT) core \
 	  core.[0-9] $(INST_ARCHAUTODIR)/extralibs.all \
 	  core.[0-9][0-9] $(BASEEXT).bso \
-	  pm_to_blib.ts core.[0-9][0-9][0-9][0-9] \
+	  pm_to_blib.ts MYMETA.json \
+	  core.[0-9][0-9][0-9][0-9] MYMETA.yml \
 	  $(BASEEXT).x $(BOOTSTRAP) \
 	  perl$(EXE_EXT) tmon.out \
 	  *$(OBJ_EXT) pm_to_blib \
 	  $(INST_ARCHAUTODIR)/extralibs.ld blibdirs.ts \
 	  core.[0-9][0-9][0-9][0-9][0-9] *perl.core \
 	  core.*perl.*.? $(MAKE_APERL_FILE) \
-	  perl $(BASEEXT).def \
+	  $(BASEEXT).def perl \
 	  core.[0-9][0-9][0-9] mon.out \
 	  lib$(BASEEXT).def perlmain.c \
 	  perl.exe so_locations \
@@ -598,8 +600,12 @@ ci :
 
 # --- MakeMaker distmeta section:
 distmeta : create_distdir metafile
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{META.yml} => q{Module meta-data (added by MakeMaker)}}) } ' \
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -e q{META.yml};' \
+	  -e 'eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }' \
 	  -e '    or print "Could not add META.yml to MANIFEST: $${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -f q{META.json};' \
+	  -e 'eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }' \
+	  -e '    or print "Could not add META.json to MANIFEST: $${'\''@'\''}\n"' --
 
 
 
@@ -796,15 +802,14 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.18">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.19">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Flash information for HTTP::MobileAgent</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>KIMURA, takefumi &lt;takefumi@mobilefactory.jp&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <PERLCORE VERSION="5,008001,0,0" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Class::Accessor" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Filter::Util::Call" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="HTTP::MobileAgent" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-2level-5.12" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-2level-5.14" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
@@ -828,7 +833,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 1.01
+# Postamble by Module::Install 1.04
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
