@@ -4,7 +4,7 @@
       "unknown"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "ExtUtils::MakeMaker version 6.31, CPAN::Meta::Converter version 2.112621",
+   "generated_by" : "ExtUtils::MakeMaker version 6.31, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "unknown"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.62",
+            "ExtUtils::MakeMaker" : "6.59",
             "Test::Base" : 0,
             "Test::More" : "0.32"
          }
